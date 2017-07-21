@@ -1,0 +1,56 @@
+import Darwin  
+// import Darwin Library to use random function Int(arc4random_uniform(61))
+
+var scoreBoard: [String : Int] = ["Mehran": 0, "Ravi": 0, "Jack": 0, "Hector": 0, "Asa": 0, "Thomas": 0, "Rejosh": 0, "Matt": 0]
+// Use dictionary to identify eah player
+// https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html
+
+func player1ScoreCard(player: String, sScore: Int) -> Int{
+    var total = sScore
+    var score = 0
+    for i in 1...5{
+        for i in 1...3{
+            score = Int(arc4random_uniform(61))
+            total -= score
+        }
+    }
+    return total
+}
+// player1ScoreCard function will calculate 5 rounds 3 shots each
+// random number generated and subtract from total
+
+
+for playerName in scoreBoard{
+    let x = player1ScoreCard(player: playerName.key, sScore: 501)
+    scoreBoard[playerName.key] = x
+}
+// return value (total = 501 - 15 shots) assign to the player name
+// create a new arrey scorBoard[]
+
+
+var myArr = Array(scoreBoard.values)
+var sortedKeys = myArr.sorted()
+for i in scoreBoard{
+    print("\(i.key)\t\(i.value)")
+}
+// myArr is sorted low to high - smallest to largers 
+
+print("\n======================\nSortedKeys:\t\t", sortedKeys)
+var counter = 1
+for xx in sortedKeys{
+    let index = sortedKeys.index(of: Int(xx))
+    if xx < 0 {
+        sortedKeys.remove(at: index!)
+    }
+}
+print("SortedKeys:\t\t", sortedKeys)
+print("======================\nWinnerTable\t\tScore\n======================")
+for xx in sortedKeys{
+    for i in scoreBoard{
+        let index = sortedKeys.index(of: Int(xx))
+        if i.value == sortedKeys[index!]{
+            print("#\(counter)\t\(i.key):\t\t", i.value)
+        }
+    }
+counter += 1
+}
