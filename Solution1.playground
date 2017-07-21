@@ -2,7 +2,7 @@ import Darwin
 // import Darwin Library to use random function Int(arc4random_uniform(61))
 
 var scoreBoard: [String : Int] = ["Mehran": 0, "Ravi": 0, "Jack": 0, "Hector": 0, "Asa": 0, "Thomas": 0, "Rejosh": 0, "Matt": 0]
-// Use dictionary to identify eah player
+// Use dictionary to identify each player
 // https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html
 
 func player1ScoreCard(player: String, sScore: Int) -> Int{
