@@ -1,4 +1,4 @@
-```swift
+```ruby
 import Darwin  
 // import Darwin Library to use random function Int(arc4random_uniform(61))
 
