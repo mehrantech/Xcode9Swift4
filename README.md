@@ -12,7 +12,7 @@ It is also possible to score 25 for the outer bulls-eye or 50 for the inner bull
 
 House rule: At the end of three rounds, whoever is closest to zero without going below zero is the winner.
 
-Check out the my Solution #1
+Check out the my <a href="Xcode9Swift4/Solution#1">Solution #1</a>
 
 Here is the output:
 
