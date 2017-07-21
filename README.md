@@ -1,5 +1,5 @@
 # Xcode9Swift4
-Apple iOS app dev - Class projects 
+<b>Apple iOS app dev - Class projects </b>
 
 Problem #1:
 Exercise: 501
@@ -16,7 +16,7 @@ Check out the my Solution #1
 
 Here is the output:
 
-
+```
 Hector    13
 Ravi      234
 Rejosh    89
@@ -25,7 +25,9 @@ Mehran    11
 Asa       55
 Thomas    29
 Matt      -32
+```
 
+```
 ======================
 SortedKeys:		 [-32, 11, 13, 29, 31, 55, 89, 234]
 SortedKeys:		 [11, 13, 29, 31, 55, 89, 234]
@@ -39,3 +41,4 @@ WinnerTable		Score
 #5	Asa:		 55
 #6	Rejosh:		 89
 #7	Ravi:		 234
+```
